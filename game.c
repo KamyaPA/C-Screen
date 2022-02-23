@@ -8,7 +8,7 @@ int game_start (void)  {
 	Window *border_left	  = window_init(0               , 1                , 2           , SCREEN_HIGHT - 2);
 	Window *border_right  = window_init(SCREEN_WIDTH - 2, 1                , 2           , SCREEN_HIGHT - 2);
 		
-	window_write(border_top   , "////////////////////////////////////////////////////////////////////////////////////////////////////", 0, 0);
+	window_write(border_top   , "/////////////////////////////////////\255\032///////////////////////////////////////////////////////////////", 0, 0);
 	window_write(border_bottom, "////////////////////////////////////////////////////////////////////////////////////////////////////", 0, 0);
 	window_write(border_left  , "//////////////////////////////////////////////////////////////////////////////////", 0, 0);
 	window_write(border_right , "//////////////////////////////////////////////////////////////////////////////////", 0, 0);
@@ -20,6 +20,8 @@ int game_start (void)  {
 	animation_add_frame(animation, change, 0, 0, '-', '-', '-',  end, end);	
 	animation_add_frame(animation, change_str, 0, 0,  " \\ ",  end);	
 	animation_add_to_cycle(animation);
+
+	
 	
 	return 0;
 }

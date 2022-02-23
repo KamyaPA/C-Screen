@@ -2,6 +2,7 @@
 
 #define SCREEN_HIGHT 40
 #define SCREEN_WIDTH 100
+#define COLOR(X) "\255\0X"
 
 typedef struct Point {
 	int x, y;
@@ -11,6 +12,7 @@ typedef struct Window {
 	List * list_attachment;
 	Point start, scale;
 	char * picture;
+	char * color;
 } Window;
 
 int screen_init (void);
